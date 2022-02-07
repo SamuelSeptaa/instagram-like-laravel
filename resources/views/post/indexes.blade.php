@@ -2,6 +2,13 @@
 
 @section('content')
 <div class="container px-5">
+    @if($posts->count()<1)
+    <div class="row">
+        <div class="col-12 align-items-center">
+            <h3> No Post(s) yet</h3>
+        </div>
+    </div>
+    @endif
     @foreach($posts as $post)
     <div class="row">
         <div class="col-6 offset-3">
